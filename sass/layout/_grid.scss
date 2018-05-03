@@ -1,0 +1,28 @@
+.row {
+  @include clearfix;
+
+  max-width: $grid-width;
+  background-color: #eee;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $grid-gap-row;
+  }
+
+  [class^='col-'] {
+    background-color: aqua;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $grid-gap-column;
+    }
+  }
+
+  @for $columns from 1 through $grid-max-columns {
+    @for $width from 1 through $columns - 1 {
+      .col-#{$width}-of-#{$columns} {
+        @include grid-column(#{$width}, #{$columns});
+      }
+    }
+  }
+}

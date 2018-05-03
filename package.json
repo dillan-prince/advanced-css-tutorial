@@ -1,0 +1,17 @@
+{
+  "name": "advanced-css-natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:scss": "node-sass sass/main.scss css/style.css -w",
+    "watch:html": "live-server",
+    "dev": "concurrently \"npm run watch:scss\" \"npm run watch:html\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "node-sass": "^4.9.0"
+  }
+}

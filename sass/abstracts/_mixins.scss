@@ -1,0 +1,14 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin grid-column($numColumnsSpanned, $numColumns) {
+  width: calc(
+    #{$numColumnsSpanned} * (100% - (#{$numColumns} - 1) * #{$grid-gap-column}) / #{$numColumns} +
+      (#{$numColumnsSpanned} - 1) * #{$grid-gap-column}
+  );
+}

@@ -1,0 +1,297 @@
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3.5rem;
+    animation: fadeInFromLeft 1.5s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.77rem;
+    animation: fadeInFromRight 1.5s; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.u-centered-text {
+  text-align: center; }
+
+.btn:link, .btn:visited {
+  font-size: 1.6rem;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn::after {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  top: 0;
+  left: 0;
+  transition: all 0.4s; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn--animated {
+  animation: fadeInFromBottom 1.5s; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 4rem; }
+  .row [class^='col-'] {
+    background-color: aqua;
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 4rem; }
+  .row .col-1-of-1 {
+    width: calc( 1 * (100% - (1 - 1) * 4rem) / 1 + (1 - 1) * 4rem); }
+  .row .col-0-of-1 {
+    width: calc( 0 * (100% - (1 - 1) * 4rem) / 1 + (0 - 1) * 4rem); }
+  .row .col-1-of-2 {
+    width: calc( 1 * (100% - (2 - 1) * 4rem) / 2 + (1 - 1) * 4rem); }
+  .row .col-1-of-3 {
+    width: calc( 1 * (100% - (3 - 1) * 4rem) / 3 + (1 - 1) * 4rem); }
+  .row .col-2-of-3 {
+    width: calc( 2 * (100% - (3 - 1) * 4rem) / 3 + (2 - 1) * 4rem); }
+  .row .col-1-of-4 {
+    width: calc( 1 * (100% - (4 - 1) * 4rem) / 4 + (1 - 1) * 4rem); }
+  .row .col-2-of-4 {
+    width: calc( 2 * (100% - (4 - 1) * 4rem) / 4 + (2 - 1) * 4rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * (100% - (4 - 1) * 4rem) / 4 + (3 - 1) * 4rem); }
+  .row .col-1-of-5 {
+    width: calc( 1 * (100% - (5 - 1) * 4rem) / 5 + (1 - 1) * 4rem); }
+  .row .col-2-of-5 {
+    width: calc( 2 * (100% - (5 - 1) * 4rem) / 5 + (2 - 1) * 4rem); }
+  .row .col-3-of-5 {
+    width: calc( 3 * (100% - (5 - 1) * 4rem) / 5 + (3 - 1) * 4rem); }
+  .row .col-4-of-5 {
+    width: calc( 4 * (100% - (5 - 1) * 4rem) / 5 + (4 - 1) * 4rem); }
+  .row .col-1-of-6 {
+    width: calc( 1 * (100% - (6 - 1) * 4rem) / 6 + (1 - 1) * 4rem); }
+  .row .col-2-of-6 {
+    width: calc( 2 * (100% - (6 - 1) * 4rem) / 6 + (2 - 1) * 4rem); }
+  .row .col-3-of-6 {
+    width: calc( 3 * (100% - (6 - 1) * 4rem) / 6 + (3 - 1) * 4rem); }
+  .row .col-4-of-6 {
+    width: calc( 4 * (100% - (6 - 1) * 4rem) / 6 + (4 - 1) * 4rem); }
+  .row .col-5-of-6 {
+    width: calc( 5 * (100% - (6 - 1) * 4rem) / 6 + (5 - 1) * 4rem); }
+  .row .col-1-of-7 {
+    width: calc( 1 * (100% - (7 - 1) * 4rem) / 7 + (1 - 1) * 4rem); }
+  .row .col-2-of-7 {
+    width: calc( 2 * (100% - (7 - 1) * 4rem) / 7 + (2 - 1) * 4rem); }
+  .row .col-3-of-7 {
+    width: calc( 3 * (100% - (7 - 1) * 4rem) / 7 + (3 - 1) * 4rem); }
+  .row .col-4-of-7 {
+    width: calc( 4 * (100% - (7 - 1) * 4rem) / 7 + (4 - 1) * 4rem); }
+  .row .col-5-of-7 {
+    width: calc( 5 * (100% - (7 - 1) * 4rem) / 7 + (5 - 1) * 4rem); }
+  .row .col-6-of-7 {
+    width: calc( 6 * (100% - (7 - 1) * 4rem) / 7 + (6 - 1) * 4rem); }
+  .row .col-1-of-8 {
+    width: calc( 1 * (100% - (8 - 1) * 4rem) / 8 + (1 - 1) * 4rem); }
+  .row .col-2-of-8 {
+    width: calc( 2 * (100% - (8 - 1) * 4rem) / 8 + (2 - 1) * 4rem); }
+  .row .col-3-of-8 {
+    width: calc( 3 * (100% - (8 - 1) * 4rem) / 8 + (3 - 1) * 4rem); }
+  .row .col-4-of-8 {
+    width: calc( 4 * (100% - (8 - 1) * 4rem) / 8 + (4 - 1) * 4rem); }
+  .row .col-5-of-8 {
+    width: calc( 5 * (100% - (8 - 1) * 4rem) / 8 + (5 - 1) * 4rem); }
+  .row .col-6-of-8 {
+    width: calc( 6 * (100% - (8 - 1) * 4rem) / 8 + (6 - 1) * 4rem); }
+  .row .col-7-of-8 {
+    width: calc( 7 * (100% - (8 - 1) * 4rem) / 8 + (7 - 1) * 4rem); }
+  .row .col-1-of-9 {
+    width: calc( 1 * (100% - (9 - 1) * 4rem) / 9 + (1 - 1) * 4rem); }
+  .row .col-2-of-9 {
+    width: calc( 2 * (100% - (9 - 1) * 4rem) / 9 + (2 - 1) * 4rem); }
+  .row .col-3-of-9 {
+    width: calc( 3 * (100% - (9 - 1) * 4rem) / 9 + (3 - 1) * 4rem); }
+  .row .col-4-of-9 {
+    width: calc( 4 * (100% - (9 - 1) * 4rem) / 9 + (4 - 1) * 4rem); }
+  .row .col-5-of-9 {
+    width: calc( 5 * (100% - (9 - 1) * 4rem) / 9 + (5 - 1) * 4rem); }
+  .row .col-6-of-9 {
+    width: calc( 6 * (100% - (9 - 1) * 4rem) / 9 + (6 - 1) * 4rem); }
+  .row .col-7-of-9 {
+    width: calc( 7 * (100% - (9 - 1) * 4rem) / 9 + (7 - 1) * 4rem); }
+  .row .col-8-of-9 {
+    width: calc( 8 * (100% - (9 - 1) * 4rem) / 9 + (8 - 1) * 4rem); }
+  .row .col-1-of-10 {
+    width: calc( 1 * (100% - (10 - 1) * 4rem) / 10 + (1 - 1) * 4rem); }
+  .row .col-2-of-10 {
+    width: calc( 2 * (100% - (10 - 1) * 4rem) / 10 + (2 - 1) * 4rem); }
+  .row .col-3-of-10 {
+    width: calc( 3 * (100% - (10 - 1) * 4rem) / 10 + (3 - 1) * 4rem); }
+  .row .col-4-of-10 {
+    width: calc( 4 * (100% - (10 - 1) * 4rem) / 10 + (4 - 1) * 4rem); }
+  .row .col-5-of-10 {
+    width: calc( 5 * (100% - (10 - 1) * 4rem) / 10 + (5 - 1) * 4rem); }
+  .row .col-6-of-10 {
+    width: calc( 6 * (100% - (10 - 1) * 4rem) / 10 + (6 - 1) * 4rem); }
+  .row .col-7-of-10 {
+    width: calc( 7 * (100% - (10 - 1) * 4rem) / 10 + (7 - 1) * 4rem); }
+  .row .col-8-of-10 {
+    width: calc( 8 * (100% - (10 - 1) * 4rem) / 10 + (8 - 1) * 4rem); }
+  .row .col-9-of-10 {
+    width: calc( 9 * (100% - (10 - 1) * 4rem) / 10 + (9 - 1) * 4rem); }
+  .row .col-1-of-11 {
+    width: calc( 1 * (100% - (11 - 1) * 4rem) / 11 + (1 - 1) * 4rem); }
+  .row .col-2-of-11 {
+    width: calc( 2 * (100% - (11 - 1) * 4rem) / 11 + (2 - 1) * 4rem); }
+  .row .col-3-of-11 {
+    width: calc( 3 * (100% - (11 - 1) * 4rem) / 11 + (3 - 1) * 4rem); }
+  .row .col-4-of-11 {
+    width: calc( 4 * (100% - (11 - 1) * 4rem) / 11 + (4 - 1) * 4rem); }
+  .row .col-5-of-11 {
+    width: calc( 5 * (100% - (11 - 1) * 4rem) / 11 + (5 - 1) * 4rem); }
+  .row .col-6-of-11 {
+    width: calc( 6 * (100% - (11 - 1) * 4rem) / 11 + (6 - 1) * 4rem); }
+  .row .col-7-of-11 {
+    width: calc( 7 * (100% - (11 - 1) * 4rem) / 11 + (7 - 1) * 4rem); }
+  .row .col-8-of-11 {
+    width: calc( 8 * (100% - (11 - 1) * 4rem) / 11 + (8 - 1) * 4rem); }
+  .row .col-9-of-11 {
+    width: calc( 9 * (100% - (11 - 1) * 4rem) / 11 + (9 - 1) * 4rem); }
+  .row .col-10-of-11 {
+    width: calc( 10 * (100% - (11 - 1) * 4rem) / 11 + (10 - 1) * 4rem); }
+  .row .col-1-of-12 {
+    width: calc( 1 * (100% - (12 - 1) * 4rem) / 12 + (1 - 1) * 4rem); }
+  .row .col-2-of-12 {
+    width: calc( 2 * (100% - (12 - 1) * 4rem) / 12 + (2 - 1) * 4rem); }
+  .row .col-3-of-12 {
+    width: calc( 3 * (100% - (12 - 1) * 4rem) / 12 + (3 - 1) * 4rem); }
+  .row .col-4-of-12 {
+    width: calc( 4 * (100% - (12 - 1) * 4rem) / 12 + (4 - 1) * 4rem); }
+  .row .col-5-of-12 {
+    width: calc( 5 * (100% - (12 - 1) * 4rem) / 12 + (5 - 1) * 4rem); }
+  .row .col-6-of-12 {
+    width: calc( 6 * (100% - (12 - 1) * 4rem) / 12 + (6 - 1) * 4rem); }
+  .row .col-7-of-12 {
+    width: calc( 7 * (100% - (12 - 1) * 4rem) / 12 + (7 - 1) * 4rem); }
+  .row .col-8-of-12 {
+    width: calc( 8 * (100% - (12 - 1) * 4rem) / 12 + (8 - 1) * 4rem); }
+  .row .col-9-of-12 {
+    width: calc( 9 * (100% - (12 - 1) * 4rem) / 12 + (9 - 1) * 4rem); }
+  .row .col-10-of-12 {
+    width: calc( 10 * (100% - (12 - 1) * 4rem) / 12 + (10 - 1) * 4rem); }
+  .row .col-11-of-12 {
+    width: calc( 11 * (100% - (12 - 1) * 4rem) / 12 + (11 - 1) * 4rem); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-container {
+    position: absolute;
+    top: 6rem;
+    left: 6rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: calc(75vh - 95vh); }
