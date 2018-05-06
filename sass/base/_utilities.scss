@@ -1,3 +1,39 @@
 .u-centered-text {
   text-align: center;
 }
+
+.u-margin-bottom {
+  &-sm {
+    margin-bottom: 2rem;
+  }
+
+  &-md {
+    margin-bottom: 5rem;
+  }
+
+  &-lg {
+    margin-bottom: 8rem;
+  }
+
+  &-xl {
+    margin-bottom: 11rem;
+  }
+}
+
+.u-padding-top {
+  &-sm {
+    padding-top: 2rem;
+  }
+
+  &-md {
+    padding-top: 5rem;
+  }
+
+  &-lg {
+    padding-top: 8rem;
+  }
+
+  &-xl {
+    padding-top: 11rem;
+  }
+}

@@ -12,3 +12,21 @@
       (#{$numColumnsSpanned} - 1) * #{$grid-gap-column}
   );
 }
+
+@mixin alternating-section-primary {
+  height: $header-height-total;
+  margin-top: calc(#{$header-height-right} - #{$header-height-total});
+  padding: 20rem 0;
+  clip-path: polygon(
+    0 calc(#{$header-height-total} - #{$header-height-right}),
+    100% 0,
+    100% $header-height-right,
+    0 100%
+  );
+}
+
+@mixin alternating-section-secondary {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: calc(#{$header-height-right} - #{$header-height-total});
+}
