@@ -20,6 +20,24 @@
   }
 }
 
+.u-margin-top {
+  &-sm {
+    margin-top: 2rem;
+  }
+
+  &-md {
+    margin-top: 5rem;
+  }
+
+  &-lg {
+    margin-top: 8rem;
+  }
+
+  &-xl {
+    margin-top: 11rem;
+  }
+}
+
 .u-padding-top {
   &-sm {
     padding-top: 2rem;

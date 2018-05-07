@@ -15,3 +15,13 @@
 .section-tours {
   @include alternating-section-secondary;
 }
+
+.section-stories {
+  @include alternating-section-primary;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url(../img/nat-4.jpg);
+}
